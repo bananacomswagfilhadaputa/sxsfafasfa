@@ -126,7 +126,7 @@ galaxy.on('message', message =>{
   }
 });
 
-client.on('message', message =>{
+galaxy.on('message', message =>{
   if(message.content.includes("https://discord.gg/")){
   if (!message.member.hasPermission("ADMINISTRATOR")) return; 
     message.delete()
@@ -135,7 +135,7 @@ client.on('message', message =>{
 })
 
 
-client.on('message', message =>{
+galaxy.on('message', message =>{
   if(message.content.includes("https://discord.me/")){
   if (!message.member.hasPermission("ADMINISTRATOR")) return; 
     message.delete()
@@ -143,7 +143,7 @@ client.on('message', message =>{
   }
 })
 
-client.on('message', message =>{
+galaxy.on('message', message =>{
   if(message.content.includes("https://youtu.be/")){
   if (!message.member.hasPermission("ADMINISTRATOR ")) return; 
     message.delete()
@@ -151,7 +151,7 @@ client.on('message', message =>{
   }
 })
 
-client.on('message', message =>{
+galaxy.on('message', message =>{
   if(message.content.includes("https://youtube.com/")){
   if (!message.member.hasPermission("ADMINISTRATOR")) return; 
     message.delete()
@@ -161,7 +161,7 @@ client.on('message', message =>{
 
 
 
-    client.on("guildMemberAdd", member => {
+    galaxy.on("guildMemberAdd", member => {
       if(member.guild.id == "677278788979261440"){
           const channel = member.guild.channels.get("697977783208509490");
           channel.setName(`👤| Members: ${member.guild.memberCount - member.guild.members.filter(m=>m.user.bot).size}`)
@@ -169,7 +169,7 @@ client.on('message', message =>{
   });
   
   
-  client.on("guildMemberRemove", member => {
+  galaxy.on("guildMemberRemove", member => {
       if(member.guild.id == "677278788979261440"){
           const channel = member.guild.channels.get("697977783208509490");
           channel.setName(`👤| Members: ${member.guild.memberCount - member.guild.members.filter(m=>m.user.bot).size}`)
